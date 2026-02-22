@@ -1,0 +1,24 @@
+{
+  "name": "@gaddario98/mcp-react-docs",
+  "version": "1.0.0",
+  "description": "MCP server that provides AI assistants with documentation and source code for @gaddario98 React packages",
+  "type": "module",
+  "main": "src/index.ts",
+  "bin": "src/index.ts",
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "dev": "tsx watch src/index.ts",
+    "inspect": "npx @modelcontextprotocol/inspector tsx src/index.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.1",
+    "typescript": "^5.8.3"
+  },
+  "author": "Giosuè Addario",
+  "license": "MIT"
+}
