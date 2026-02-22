@@ -32,10 +32,7 @@ Aggiungi al file `.gemini/settings.json` del tuo workspace:
   "mcpServers": {
     "react-docs": {
       "command": "npx",
-      "args": [
-        "tsx",
-        "/Users/gaddario98/Documents/projects-workspace/packages/mcp-react-docs/src/index.ts"
-      ],
+      "args": ["tsx", "/percorso/assoluto/verso/mcp-react-docs/src/index.ts"],
       "env": {
         "GITHUB_TOKEN": "ghp_il_tuo_token_qui"
       }
@@ -53,10 +50,7 @@ Aggiungi a `~/.claude/claude_desktop_config.json`:
   "mcpServers": {
     "react-docs": {
       "command": "npx",
-      "args": [
-        "tsx",
-        "/Users/gaddario98/Documents/projects-workspace/packages/mcp-react-docs/src/index.ts"
-      ],
+      "args": ["tsx", "/percorso/assoluto/verso/mcp-react-docs/src/index.ts"],
       "env": {
         "GITHUB_TOKEN": "ghp_il_tuo_token_qui"
       }
@@ -70,7 +64,7 @@ Aggiungi a `~/.claude/claude_desktop_config.json`:
 In Cursor Settings → MCP Servers → Add:
 
 - **Name**: `react-docs`
-- **Command**: `npx tsx /Users/gaddario98/Documents/projects-workspace/packages/mcp-react-docs/src/index.ts`
+- **Command**: `npx tsx /percorso/assoluto/verso/mcp-react-docs/src/index.ts`
 
 ### VS Code + Copilot (settings.json)
 
@@ -80,10 +74,7 @@ In Cursor Settings → MCP Servers → Add:
     "servers": {
       "react-docs": {
         "command": "npx",
-        "args": [
-          "tsx",
-          "/Users/gaddario98/Documents/projects-workspace/packages/mcp-react-docs/src/index.ts"
-        ],
+        "args": ["tsx", "/percorso/assoluto/verso/mcp-react-docs/src/index.ts"],
         "env": {
           "GITHUB_TOKEN": "ghp_il_tuo_token_qui"
         }
@@ -109,7 +100,7 @@ Per generare un Token:
 ## Test con MCP Inspector
 
 ```bash
-cd /Users/gaddario98/Documents/projects-workspace/packages/mcp-react-docs
+cd /percorso/assoluto/verso/mcp-react-docs
 npx @modelcontextprotocol/inspector npx tsx src/index.ts
 ```
 
