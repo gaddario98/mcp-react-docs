@@ -35,7 +35,10 @@ Aggiungi al file `.gemini/settings.json` del tuo workspace:
       "args": [
         "tsx",
         "/Users/gaddario98/Documents/projects-workspace/packages/mcp-react-docs/src/index.ts"
-      ]
+      ],
+      "env": {
+        "GITHUB_TOKEN": "ghp_il_tuo_token_qui"
+      }
     }
   }
 }
@@ -53,7 +56,10 @@ Aggiungi a `~/.claude/claude_desktop_config.json`:
       "args": [
         "tsx",
         "/Users/gaddario98/Documents/projects-workspace/packages/mcp-react-docs/src/index.ts"
-      ]
+      ],
+      "env": {
+        "GITHUB_TOKEN": "ghp_il_tuo_token_qui"
+      }
     }
   }
 }
@@ -77,12 +83,28 @@ In Cursor Settings → MCP Servers → Add:
         "args": [
           "tsx",
           "/Users/gaddario98/Documents/projects-workspace/packages/mcp-react-docs/src/index.ts"
-        ]
+        ],
+        "env": {
+          "GITHUB_TOKEN": "ghp_il_tuo_token_qui"
+        }
       }
     }
   }
 }
 ```
+
+## 🔑 Come ottenere il GITHUB_TOKEN
+
+Dato che l'MCP invia richieste direttamente a GitHub, senza un token incapperai nel limite di **60 richieste all'ora**, limitando pesantemente o bloccando strumenti come `search_source`.
+
+Per generare un Token:
+
+1. Accedi a GitHub e vai in **Settings** > **Developer Settings** > **Personal access tokens** > **Tokens (classic)** (o usa i _Fine-grained tokens_ se preferisci).
+2. Clicca su **Generate new token (classic)**.
+3. Assegna un nome (es. `local_mcp_server`).
+4. Nessuno scope particolare è obbligatorio se i repo (`gaddario98/react-core`, ecc.) sono pubblici. Se in futuro i repo diverranno privati, spunta l'accesso `repo`.
+5. Clicca generate e copia il token (inizierà con `ghp_...`).
+6. Aggiungilo all'interno dell'oggetto `"env"` in tutte le configurazioni del tuo Editor come mostrato negli esempi sopra. In Cursor puoi configurarlo dal setup dell'MCP Server nelle Settings UI.
 
 ## Test con MCP Inspector
 
