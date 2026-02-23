@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "description": "MCP server that provides AI assistants with documentation and source code for @gaddario98 React packages",
   "type": "module",
-  "main": "src/index.ts",
-  "bin": "src/index.ts",
+  "main": "dist/index.js",
+  "bin": "dist/index.js",
   "scripts": {
-    "start": "tsx src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
     "dev": "tsx watch src/index.ts",
-    "inspect": "npx @modelcontextprotocol/inspector tsx src/index.ts"
+    "inspect": "npx @modelcontextprotocol/inspector node dist/index.js"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.12.1",

@@ -10,10 +10,10 @@ const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 
 // Helper to make API calls to GitHub with optional authentication
 async function fetchGitHubAPI(endpoint: string, options: RequestInit = {}) {
-  const headers: HeadersInit = {
+  const headers: Record<string, string> = {
     Accept: "application/vnd.github.v3+json",
     "User-Agent": "mcp-react-docs-server",
-    ...options.headers,
+    ...((options.headers as Record<string, string>) || {}),
   };
 
   if (GITHUB_TOKEN) {
